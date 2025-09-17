@@ -1,0 +1,33 @@
+<svg viewBox="0 0 400 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Android Phone Frame -->
+  <defs>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="3" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Phone body -->
+  <rect x="0" y="0" width="400" height="800" rx="24" fill="#2a2a2a" filter="url(#shadow)"/>
+
+  <!-- Screen bezel -->
+  <rect x="8" y="8" width="384" height="784" rx="20" fill="#000"/>
+
+  <!-- Screen area (transparent for screenshot) -->
+  <rect x="16" y="60" width="368" height="680" rx="0" fill="transparent" class="content-area"/>
+
+  <!-- Top speaker -->
+  <rect x="150" y="25" width="100" height="6" rx="3" fill="#333"/>
+
+  <!-- Navigation buttons -->
+  <circle cx="100" cy="765" r="8" fill="none" stroke="#666" stroke-width="2"/>
+  <rect x="196" y="757" width="8" height="16" rx="2" fill="#666"/>
+  <path d="M 290 757 L 300 765 L 290 773" fill="none" stroke="#666" stroke-width="2"/>
+</svg>

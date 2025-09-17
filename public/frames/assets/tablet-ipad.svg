@@ -1,0 +1,28 @@
+<svg viewBox="0 0 1024 768" xmlns="http://www.w3.org/2000/svg">
+  <!-- iPad Tablet Frame -->
+  <defs>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="0" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Tablet body -->
+  <rect x="0" y="0" width="1024" height="768" rx="24" fill="#2c2c2c" filter="url(#shadow)"/>
+
+  <!-- Screen bezel -->
+  <rect x="20" y="20" width="984" height="728" rx="8" fill="#000"/>
+
+  <!-- Screen area (transparent for screenshot) -->
+  <rect x="40" y="40" width="944" height="688" rx="0" fill="transparent" class="content-area"/>
+
+  <!-- Home button -->
+  <circle cx="512" cy="748" r="0" fill="#444"/>
+</svg>

@@ -1,0 +1,289 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-09-18",
+  "frames": [
+    {
+      "id": "browser-chrome",
+      "name": "browser-chrome",
+      "displayName": "Chrome Browser",
+      "category": "browser",
+      "assets": {
+        "thumbnail": "/frames/thumbnails/browser-chrome.png",
+        "preview": "/frames/previews/browser-chrome.png",
+        "frame": "/frames/assets/browser-chrome.svg"
+      },
+      "dimensions": {
+        "width": 1200,
+        "height": 800,
+        "contentArea": {
+          "x": 0,
+          "y": 68,
+          "width": 1200,
+          "height": 732
+        }
+      },
+      "properties": {
+        "isCustomizable": true,
+        "supportsShadow": true,
+        "supportsOpacity": true
+      }
+    },
+    {
+      "id": "browser-safari",
+      "name": "browser-safari",
+      "displayName": "Safari Browser",
+      "category": "browser",
+      "assets": {
+        "thumbnail": "/frames/thumbnails/browser-safari.png",
+        "preview": "/frames/previews/browser-safari.png",
+        "frame": "/frames/assets/browser-safari.svg"
+      },
+      "dimensions": {
+        "width": 1200,
+        "height": 800,
+        "contentArea": {
+          "x": 0,
+          "y": 68,
+          "width": 1200,
+          "height": 732
+        }
+      },
+      "properties": {
+        "isCustomizable": true,
+        "supportsShadow": true,
+        "supportsOpacity": true
+      }
+    },
+    {
+      "id": "browser-generic",
+      "name": "browser-generic",
+      "displayName": "Generic Browser",
+      "category": "browser",
+      "assets": {
+        "thumbnail": "/frames/thumbnails/browser-generic.png",
+        "preview": "/frames/previews/browser-generic.png",
+        "frame": "/frames/assets/browser-generic.svg"
+      },
+      "dimensions": {
+        "width": 1200,
+        "height": 800,
+        "contentArea": {
+          "x": 0,
+          "y": 48,
+          "width": 1200,
+          "height": 752
+        }
+      },
+      "properties": {
+        "isCustomizable": true,
+        "supportsShadow": true,
+        "supportsOpacity": true
+      }
+    },
+    {
+      "id": "mobile-iphone",
+      "name": "mobile-iphone",
+      "displayName": "iPhone",
+      "category": "mobile",
+      "assets": {
+        "thumbnail": "/frames/thumbnails/mobile-iphone.png",
+        "preview": "/frames/previews/mobile-iphone.png",
+        "frame": "/frames/assets/mobile-iphone.svg"
+      },
+      "dimensions": {
+        "width": 400,
+        "height": 800,
+        "contentArea": {
+          "x": 20,
+          "y": 80,
+          "width": 360,
+          "height": 640
+        }
+      },
+      "properties": {
+        "isCustomizable": true,
+        "supportsShadow": true,
+        "supportsOpacity": true
+      }
+    },
+    {
+      "id": "mobile-android",
+      "name": "mobile-android",
+      "displayName": "Android Phone",
+      "category": "mobile",
+      "assets": {
+        "thumbnail": "/frames/thumbnails/mobile-android.png",
+        "preview": "/frames/previews/mobile-android.png",
+        "frame": "/frames/assets/mobile-android.svg"
+      },
+      "dimensions": {
+        "width": 400,
+        "height": 800,
+        "contentArea": {
+          "x": 16,
+          "y": 60,
+          "width": 368,
+          "height": 680
+        }
+      },
+      "properties": {
+        "isCustomizable": true,
+        "supportsShadow": true,
+        "supportsOpacity": true
+      }
+    },
+    {
+      "id": "tablet-ipad",
+      "name": "tablet-ipad",
+      "displayName": "iPad",
+      "category": "mobile",
+      "assets": {
+        "thumbnail": "/frames/thumbnails/tablet-ipad.png",
+        "preview": "/frames/previews/tablet-ipad.png",
+        "frame": "/frames/assets/tablet-ipad.svg"
+      },
+      "dimensions": {
+        "width": 1024,
+        "height": 768,
+        "contentArea": {
+          "x": 40,
+          "y": 40,
+          "width": 944,
+          "height": 688
+        }
+      },
+      "properties": {
+        "isCustomizable": true,
+        "supportsShadow": true,
+        "supportsOpacity": true
+      }
+    },
+    {
+      "id": "desktop-mac",
+      "name": "desktop-mac",
+      "displayName": "macOS Window",
+      "category": "desktop",
+      "assets": {
+        "thumbnail": "/frames/thumbnails/desktop-mac.png",
+        "preview": "/frames/previews/desktop-mac.png",
+        "frame": "/frames/assets/desktop-mac.svg"
+      },
+      "dimensions": {
+        "width": 1440,
+        "height": 900,
+        "contentArea": {
+          "x": 0,
+          "y": 38,
+          "width": 1440,
+          "height": 862
+        }
+      },
+      "properties": {
+        "isCustomizable": true,
+        "supportsShadow": true,
+        "supportsOpacity": true
+      }
+    },
+    {
+      "id": "desktop-windows",
+      "name": "desktop-windows",
+      "displayName": "Windows",
+      "category": "desktop",
+      "assets": {
+        "thumbnail": "/frames/thumbnails/desktop-windows.png",
+        "preview": "/frames/previews/desktop-windows.png",
+        "frame": "/frames/assets/desktop-windows.svg"
+      },
+      "dimensions": {
+        "width": 1440,
+        "height": 900,
+        "contentArea": {
+          "x": 0,
+          "y": 32,
+          "width": 1440,
+          "height": 868
+        }
+      },
+      "properties": {
+        "isCustomizable": true,
+        "supportsShadow": true,
+        "supportsOpacity": true
+      }
+    },
+    {
+      "id": "custom-shadow",
+      "name": "custom-shadow",
+      "displayName": "Shadow Frame",
+      "category": "custom",
+      "assets": {
+        "thumbnail": "/frames/thumbnails/custom-shadow.png",
+        "preview": "/frames/previews/custom-shadow.png",
+        "frame": "/frames/assets/custom-shadow.svg"
+      },
+      "dimensions": {
+        "width": 1200,
+        "height": 800,
+        "contentArea": {
+          "x": 40,
+          "y": 40,
+          "width": 1120,
+          "height": 720
+        }
+      },
+      "properties": {
+        "isCustomizable": false,
+        "supportsShadow": false,
+        "supportsOpacity": true
+      }
+    },
+    {
+      "id": "custom-border",
+      "name": "custom-border",
+      "displayName": "Gradient Border",
+      "category": "custom",
+      "assets": {
+        "thumbnail": "/frames/thumbnails/custom-border.png",
+        "preview": "/frames/previews/custom-border.png",
+        "frame": "/frames/assets/custom-border.svg"
+      },
+      "dimensions": {
+        "width": 1200,
+        "height": 800,
+        "contentArea": {
+          "x": 8,
+          "y": 8,
+          "width": 1184,
+          "height": 784
+        }
+      },
+      "properties": {
+        "isCustomizable": true,
+        "supportsShadow": true,
+        "supportsOpacity": true,
+        "defaultColor": "#667eea"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "browser",
+      "name": "Browsers",
+      "description": "Web browser frames for website mockups"
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile Devices",
+      "description": "Phone and tablet frames"
+    },
+    {
+      "id": "desktop",
+      "name": "Desktop",
+      "description": "Desktop application windows"
+    },
+    {
+      "id": "custom",
+      "name": "Custom Frames",
+      "description": "Special frames with custom effects"
+    }
+  ]
+}

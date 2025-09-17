@@ -1,0 +1,38 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Generic Browser Frame -->
+  <defs>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Browser window -->
+  <rect x="0" y="0" width="1200" height="800" rx="4" fill="#fafafa" filter="url(#shadow)"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1200" height="48" fill="#e8e8e8"/>
+
+  <!-- Navigation buttons -->
+  <circle cx="24" cy="24" r="8" fill="none" stroke="#999" stroke-width="2"/>
+  <circle cx="52" cy="24" r="8" fill="none" stroke="#999" stroke-width="2"/>
+  <circle cx="80" cy="24" r="8" fill="none" stroke="#999" stroke-width="2"/>
+
+  <!-- URL bar -->
+  <rect x="120" y="12" width="960" height="24" rx="4" fill="#fff" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Menu button -->
+  <circle cx="1160" cy="24" r="2" fill="#666"/>
+  <circle cx="1160" cy="24" r="2" fill="#666" transform="translate(0,-8)"/>
+  <circle cx="1160" cy="24" r="2" fill="#666" transform="translate(0,8)"/>
+
+  <!-- Content area (transparent for screenshot) -->
+  <rect x="0" y="48" width="1200" height="752" fill="transparent" class="content-area"/>
+</svg>
