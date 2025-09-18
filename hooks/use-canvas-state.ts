@@ -11,6 +11,7 @@ export interface CanvasState {
   isSpacePressed: boolean;
   showGrid: boolean;
   imageUrl: string | null;
+  imageElement: HTMLImageElement | null;
   imageLoaded: boolean;
   imageError: string | null;
   imageMetadata: {
@@ -39,6 +40,7 @@ export function useCanvasState(options: UseCanvasStateOptions = {}) {
     isSpacePressed: false,
     showGrid: true,
     imageUrl: null,
+    imageElement: null,
     imageLoaded: false,
     imageError: null,
     imageMetadata: null,
@@ -99,24 +101,27 @@ export function useCanvasState(options: UseCanvasStateOptions = {}) {
   }, [defaultZoom]);
 
   // Fit image to screen
-  const fitToScreen = useCallback((canvasWidth: number, canvasHeight: number) => {
-    if (!imageRef.current) return;
+  const fitToScreen = useCallback(
+    (canvasWidth: number, canvasHeight: number) => {
+      if (!state.imageElement) return;
 
-    const padding = 100;
-    const widthRatio = (canvasWidth - padding) / imageRef.current.width;
-    const heightRatio = (canvasHeight - padding) / imageRef.current.height;
-    const fitZoom = Math.min(widthRatio, heightRatio, 1);
+      const padding = 100;
+      const widthRatio = (canvasWidth - padding) / state.imageElement.width;
+      const heightRatio = (canvasHeight - padding) / state.imageElement.height;
+      const fitZoom = Math.min(widthRatio, heightRatio, 1);
 
-    const scaledWidth = imageRef.current.width * fitZoom;
-    const scaledHeight = imageRef.current.height * fitZoom;
+      const scaledWidth = state.imageElement.width * fitZoom;
+      const scaledHeight = state.imageElement.height * fitZoom;
 
-    setState((prev) => ({
-      ...prev,
-      zoom: fitZoom,
-      panX: (canvasWidth - scaledWidth) / 2,
-      panY: (canvasHeight - scaledHeight) / 2,
-    }));
-  }, []);
+      setState((prev) => ({
+        ...prev,
+        zoom: fitZoom,
+        panX: (canvasWidth - scaledWidth) / 2,
+        panY: (canvasHeight - scaledHeight) / 2,
+      }));
+    },
+    [state.imageElement]
+  );
 
   // Load image
   const loadImage = useCallback((url: string, file?: File) => {
@@ -125,6 +130,7 @@ export function useCanvasState(options: UseCanvasStateOptions = {}) {
       imageUrl: url,
       imageLoaded: false,
       imageError: null,
+      imageElement: null,
     }));
 
     const img = new Image();
@@ -142,6 +148,7 @@ export function useCanvasState(options: UseCanvasStateOptions = {}) {
 
       setState((prev) => ({
         ...prev,
+        imageElement: img,
         imageLoaded: true,
         imageError: null,
         imageMetadata: metadata,
@@ -151,6 +158,7 @@ export function useCanvasState(options: UseCanvasStateOptions = {}) {
     img.onerror = () => {
       setState((prev) => ({
         ...prev,
+        imageElement: null,
         imageLoaded: false,
         imageError: "Failed to load image",
         imageMetadata: null,
@@ -283,7 +291,7 @@ export function useCanvasState(options: UseCanvasStateOptions = {}) {
 
   return {
     state,
-    imageRef: imageRef.current,
+    imageRef: state.imageElement,
     actions: {
       setZoom,
       zoomAtPoint,

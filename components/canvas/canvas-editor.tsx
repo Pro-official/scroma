@@ -107,7 +107,7 @@ export function CanvasEditor({ className, imageSrc, onImageLoad }: CanvasEditorP
     return () => {
       cancelAnimationFrame(animationId);
     };
-  }, [state.zoom, state.panX, state.panY, state.showGrid, imageRef]);
+  }, [state.zoom, state.panX, state.panY, state.showGrid, imageRef, state.imageLoaded]);
 
   // Handle file selection
   const handleFileSelect = useCallback(
