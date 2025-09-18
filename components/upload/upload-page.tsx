@@ -9,7 +9,11 @@ import { useFileUpload } from "@/hooks/use-file-upload";
 import { ProcessedFile } from "@/lib/upload/file-validation";
 import { AlertCircle } from "lucide-react";
 
-export function UploadPage() {
+interface UploadPageProps {
+  onImageUploaded?: (imageSrc: string) => void;
+}
+
+export function UploadPage({ onImageUploaded }: UploadPageProps = {}) {
   const [error, setError] = useState<string | null>(null);
   const [processedImage, setProcessedImage] = useState<ProcessedFile | null>(null);
 
@@ -19,6 +23,10 @@ export function UploadPage() {
       onUploadComplete: (file) => {
         setProcessedImage(file);
         setError(null);
+        // Pass the image source to parent component
+        if (onImageUploaded && file.src) {
+          onImageUploaded(file.src);
+        }
       },
       onUploadError: (errorMessage) => {
         setError(errorMessage);

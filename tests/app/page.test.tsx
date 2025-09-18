@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Home from "@/app/page";
 
 describe("Home Page", () => {
-  it("should render the main heading", () => {
+  it("should render upload page initially", () => {
     render(<Home />);
     const heading = screen.getByRole("heading", {
       name: /Scroma Upload/i,
@@ -11,7 +11,7 @@ describe("Home Page", () => {
     expect(heading).toBeInTheDocument();
   });
 
-  it("should render the description", () => {
+  it("should render the upload description", () => {
     render(<Home />);
     const description = screen.getByText(/Create beautiful screenshot mockups in seconds/i);
     expect(description).toBeInTheDocument();
